@@ -45,6 +45,10 @@ const promiseB = 100;
 const promiseC = new Promise((resolve, reject) => {
   setTimeout(resolve, 1000, `${amd.name} symbol is ${amd.symbol} `);
 });
-Promise.all([promiseA, promiseB, promiseC]).then((values) =>
+const promiseFetch = fetch("https://jsonplaceholder.typicode.com/users")
+  .then((res) => res.json())
+  .catch((err) => console.log(err));
+
+Promise.all([promiseA, promiseB, promiseC, promiseFetch]).then((values) =>
   console.log(values)
 );
