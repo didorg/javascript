@@ -38,12 +38,32 @@ const premiumStocks = stocks.filter((stock) => {
 console.log(premiumStocks);
 
 // Map -> returning a copy. Not destructuring
-const stockSplit = stocks.map(stock => {
-    if(stock.price > 500){
-        // Destructuring:
-        // stock.price = stock.price / 2;
-        // return stock
-        return {symbol: stock.symbol, name: stock.name, price: stock.price / 2, premium: stock.premium }
-    } else return stock;
+const stockSplit = stocks.map((stock) => {
+  if (stock.price > 500) {
+    // Destructuring:
+    // stock.price = stock.price / 2;
+    // return stock
+    return {
+      symbol: stock.symbol,
+      name: stock.name,
+      price: stock.price / 2,
+      premium: stock.premium,
+    };
+  } else return stock;
 });
 console.log(stockSplit);
+
+// Reduce
+const primiumTotal = stocks.reduce((acc, curr) => {
+  if (curr.premium) {
+    acc += curr.price;
+  }
+  return acc;
+}, 0);
+console.log(primiumTotal);
+
+// Find
+const firstPremium = stocks.find((pm) => {
+  return pm.price >= 100;
+});
+console.log(firstPremium);
