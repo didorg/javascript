@@ -25,4 +25,5 @@ const addStock = (stock) => {
 
 // Problem: AMD is never added to stocks before the DOM render the values
 getStock();
-addStock(amd); 
+addStock(amd);
+
