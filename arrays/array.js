@@ -67,3 +67,15 @@ const firstPremium = stocks.find((pm) => {
   return pm.price >= 100;
 });
 console.log(firstPremium);
+
+// Sort
+const desc = (a, b) => b - a;
+const asc = (a, b) => a - b;
+const ascStocksPrice = (a, b) => a.price - b.price;
+
+scores.sort(asc);
+stocks.sort(ascStocksPrice);
+console.log(" <<<<<< >>>>>>");
+console.log(scores);
+console.log(stocks);
+console.log(" <<<<<< >>>>>>");
