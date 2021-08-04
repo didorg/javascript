@@ -1,6 +1,7 @@
 let fruits = ["Apples", "bananas", "mangoes"];
 let citrus = ["oranges", "mandarins", "limes"];
 const scores = [10, 6, 7, 8, 4, 9, 10, 8];
+
 const stocks = [
   { symbol: "AAPL", name: "Apple", price: 150, premium: true },
   { symbol: "TSLA", name: "Tesla", price: 780, premium: true },
