@@ -42,3 +42,6 @@ console.log(mssg.getAttribute("class"));
 mssg.setAttribute("class", "success");
 
 console.log(mssg.getAttribute("class"));
+console.log("***********");
+console.log(mssg);
+console.log("***********");
