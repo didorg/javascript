@@ -18,7 +18,7 @@ console.log(container.classList);
 // container.classList.add('error');
 // container.classList.remove('error');
 
-const pInContainer = document.querySelectorAll("div.container > p");
+const pInContainer = document.querySelectorAll("section.container > p");
 pInContainer.forEach((p) => {
   //innerText don't work with hidden elements
   if (p.innerText.includes("error")) {
