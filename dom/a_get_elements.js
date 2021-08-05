@@ -20,28 +20,3 @@ const prs = document.getElementsByTagName("p");
 console.log(prs);
 console.log(prs[1]);
 /** Others way to get elements from the DOM ***********************/
-
-ps.forEach((p, i) => {
-  console.log(p.innerText);
-  p.innerText += ` (${i} - new text!)`;
-});
-
-content.innerHTML += "<h2>this is an h2 added to the content</h2>";
-
-const people = ["Mario", "Luis", "John"];
-
-people.forEach((person) => {
-  content.innerHTML += `<p>${person}</p>`;
-});
-
-// Get and Set attribute
-const mssg = document.querySelector("p.error");
-// Get
-console.log(mssg.getAttribute("class"));
-// Set
-mssg.setAttribute("class", "success");
-
-console.log(mssg.getAttribute("class"));
-console.log("***********");
-console.log(mssg);
-console.log("***********");
