@@ -129,3 +129,11 @@ let myCars: {} = [
     ],
   },
 ];
+
+// Optional chaining
+const civic: {} = myCars?.[1];
+const chevyRaiting: number = myCars?.[0].overview?.rating;
+const chevyColors: [] = myCars?.[0].colors;
+const chevyCylinders: boolean = myCars?.[0].cylinders === 8;
+
+console.log(chevyColors);

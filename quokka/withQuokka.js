@@ -130,6 +130,3 @@ let cars = [
   },
 ];
 
-// Optional chaining
-const chevroletRaiting = cars[0]?.overview?.rating;
-console.log(chevroletRaiting);
