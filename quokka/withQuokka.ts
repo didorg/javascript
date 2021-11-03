@@ -5,7 +5,7 @@ let cars: {} = [
   {
     id: "234jl234k",
     brand: "Chevrolet",
-    name: "Impala",
+    model: "Impala",
     mpg: 14,
     cylinders: 8,
     displacement: 454,
