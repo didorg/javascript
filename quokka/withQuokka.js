@@ -10,6 +10,7 @@ let myCars = [
     acceleration: 9,
     year: "1970-01-01",
     origin: "USA",
+    price: 28000,
     overview: {
       rating: 4.3,
       description: "chevrolet impala description",
@@ -49,6 +50,7 @@ let myCars = [
     acceleration: 15,
     year: "1974-01-01",
     origin: "Japan",
+    price: 26000,
     overview: {
       rating: 4.8,
       description: "honde civic description",
@@ -89,6 +91,7 @@ let myCars = [
     acceleration: 15.5,
     year: "1974-01-01",
     origin: "Japan",
+    price: 24500,
     overview: {
       rating: 4.7,
       description: "subaru description",
