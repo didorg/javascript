@@ -201,4 +201,9 @@ const groupCarByID = cars.reduce((acc, currCar) => {
   return { ...acc, [currCar.id]: currCar };
 }, {});
 console.log(groupCarByID);
-
+// highest price
+const highestPrice = cars.reduce((acc, currCar) => {
+  if (null === acc || currCar.price > acc) return currCar.price;
+  return acc;
+}, null);
+console.log(highestPrice);
