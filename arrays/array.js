@@ -40,17 +40,14 @@ console.log(premiumStocks);
 
 // Map -> returning a copy. Not destructuring
 const stockSplit = stocks.map((stock) => {
-  if (stock.price > 500) {
-    // Destructuring:
-    // stock.price = stock.price / 2;
-    // return stock
-    return {
-      symbol: stock.symbol,
-      name: stock.name,
-      price: stock.price / 2,
-      premium: stock.premium,
-    };
-  } else return stock;
+  return stock.price > 500
+    ? {
+        symbol: stock.symbol,
+        name: stock.name,
+        price: stock.price / 2,
+        premium: stock.premium,
+      }
+    : stock;
 });
 console.log(stockSplit);
 
@@ -76,7 +73,6 @@ const ascStocksPrice = (a, b) => a.price - b.price;
 
 scores.sort(asc);
 stocks.sort(ascStocksPrice);
-console.log(" <<<<<< >>>>>>");
 console.log(scores);
-console.log(stocks);
-console.log(" <<<<<< >>>>>>");
+console.table(stocks);
+
