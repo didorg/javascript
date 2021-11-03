@@ -1,9 +1,10 @@
 import { performance } from "perf_hooks";
 
 // Using (Quokka.js VSC Extension) https://quokkajs.com/
-let cars:{} = [
+let cars: {} = [
   {
-    name: "chevrolet impala",
+    brand: "Chevrolet",
+    name: "Impala",
     mpg: 14,
     cylinders: 8,
     displacement: 454,
@@ -43,7 +44,58 @@ let cars:{} = [
     ],
   },
   {
-    name: "honda civic",
+    brand: "Honda",
+    model: "Acord",
+    mpg: 28,
+    cylinders: 4,
+    displacement: 120,
+    horsepower: 170,
+    weight: 2489,
+    acceleration: 20,
+    year: "1974-01-01",
+    origin: "Japan",
+    price: 31000,
+    overview: {
+      rating: 4.9,
+      description: "honde acord description",
+      bestYears: [3245, 1466, 7677],
+      countryByDemand: [
+        { name: "Cuba", code: "CU" },
+        { name: "United States", code: "US" },
+      ],
+    },
+    colors: [
+      {
+        color: "red",
+        category: "hue",
+        type: "primary",
+        code: {
+          rgba: [255, 0, 0, 1],
+          hex: "#FF0",
+        },
+      },
+      {
+        color: "white",
+        category: "value",
+        code: {
+          rgba: [0, 0, 0, 1],
+          hex: "#FFF",
+        },
+      },
+      {
+        color: "blue",
+        category: "hue",
+        type: "primary",
+        code: {
+          rgba: [0, 0, 255, 1],
+          hex: "#00F",
+        },
+      },
+    ],
+  },
+  {
+    brand: "Honda",
+    model: "Civic",
     mpg: 24,
     cylinders: 4,
     displacement: 120,
@@ -84,7 +136,8 @@ let cars:{} = [
     ],
   },
   {
-    name: "subaru",
+    brand: "Subaru",
+    model: "Forester",
     mpg: 26,
     cylinders: 4,
     displacement: 108,
@@ -138,7 +191,6 @@ let cars:{} = [
 // Optional chaining
 const civic: {} = cars?.[1];
 const chevyRaiting: number = cars?.[0].overview?.rating;
-const chevyColors: [] = cars?.[0].colors;
 const chevyCylinders: boolean = cars?.[0].cylinders === 8;
 
 // Quit casting
