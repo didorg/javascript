@@ -3,6 +3,7 @@ import { performance } from "perf_hooks";
 // Using (Quokka.js VSC Extension) https://quokkajs.com/
 let cars: {} = [
   {
+    id: "234jl234k",
     brand: "Chevrolet",
     name: "Impala",
     mpg: 14,
@@ -44,6 +45,7 @@ let cars: {} = [
     ],
   },
   {
+    id: "98df9d9de1",
     brand: "Honda",
     model: "Acord",
     mpg: 28,
@@ -94,6 +96,7 @@ let cars: {} = [
     ],
   },
   {
+    id: "234jlfdsfe",
     brand: "Honda",
     model: "Civic",
     mpg: 24,
@@ -136,6 +139,7 @@ let cars: {} = [
     ],
   },
   {
+    id: "kd93k41l234k",
     brand: "Subaru",
     model: "Forester",
     mpg: 26,

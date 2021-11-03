@@ -1,6 +1,7 @@
 // Using (Quokka.js VSC Extension) https://quokkajs.com/
 let cars = [
   {
+    id: "234jl234k",
     brand: "Chevrolet",
     name: "Impala",
     mpg: 14,
@@ -42,6 +43,7 @@ let cars = [
     ],
   },
   {
+    id: "98df9d9de1",
     brand: "Honda",
     model: "Acord",
     mpg: 28,
@@ -92,6 +94,7 @@ let cars = [
     ],
   },
   {
+    id: "234jlfdsfe",
     brand: "Honda",
     model: "Civic",
     mpg: 24,
@@ -134,6 +137,7 @@ let cars = [
     ],
   },
   {
+    id: "kd93k41l234k",
     brand: "Subaru",
     model: "Forester",
     mpg: 26,
@@ -185,7 +189,16 @@ let cars = [
     ],
   },
 ];
+let carslenght = cars.length;
+console.log(carslenght);
+/** REDUCE */
+// Get total price of all cars
+const totalPrice = cars.reduce((acc, currCar) => acc + currCar.price, 0);
+// arr of models(map)
+const models = cars.reduce((acc, currCar) => [...acc, currCar.brand], []);
+// group cars by id => car lookup (dict)
+const groupCarByID = cars.reduce((acc, currCar) => {
+  return { ...acc, [currCar.id]: currCar };
+}, {});
+console.log(groupCarByID);
 
-const totalPrice = cars.reduce((acc, curr) => acc + curr.price, 0);
-
-console.log(totalPrice);
