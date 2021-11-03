@@ -1,5 +1,7 @@
+import { performance } from "perf_hooks";
+
 // Using (Quokka.js VSC Extension) https://quokkajs.com/
-let myCars: {} = [
+let cars:{} = [
   {
     name: "chevrolet impala",
     mpg: 14,
@@ -131,9 +133,29 @@ let myCars: {} = [
 ];
 
 // Optional chaining
-const civic: {} = myCars?.[1];
-const chevyRaiting: number = myCars?.[0].overview?.rating;
-const chevyColors: [] = myCars?.[0].colors;
-const chevyCylinders: boolean = myCars?.[0].cylinders === 8;
+const civic: {} = cars?.[1];
+const chevyRaiting: number = cars?.[0].overview?.rating;
+const chevyColors: [] = cars?.[0].colors;
+const chevyCylinders: boolean = cars?.[0].cylinders === 8;
 
-console.log(chevyColors);
+// Quit casting
+const str: string = "5";
+const num: number = +str;
+const str1: string = `${4}`;
+const nums: number[] = [1, 2, 3, 4, 5, 6, 7];
+const numbersObj: {} = { ...nums };
+const civicOverview: {} = cars?.[1].overview;
+const civicOverviewArr: string[] = Object.keys(civicOverview);
+
+console.log(civicOverviewArr);
+
+// measure time taken by a function or a block to execute
+const doSomething = (): void => {
+  const startTime: number = performance.now();
+  for (let i = 0; i <= 1000; i++) {
+    i + 1;
+  }
+  const endTime: number = performance.now();
+  console.log(`Call to doSomething took ${endTime - startTime} milliseconds`);
+};
+doSomething();

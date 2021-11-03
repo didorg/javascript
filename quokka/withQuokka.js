@@ -1,5 +1,5 @@
 // Using (Quokka.js VSC Extension) https://quokkajs.com/
-let cars = [
+let myCars = [
   {
     name: "chevrolet impala",
     mpg: 14,
