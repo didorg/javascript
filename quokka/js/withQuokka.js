@@ -207,5 +207,13 @@ const highestPrice = cars.reduce((acc, currCar) => {
   return acc;
 }, null);
 console.log(highestPrice);
-
 console.table(cars);
+
+/** 
+* Better Comments extension
+** Important information is highlighted
+* ! Deprecated method, do not use
+* ? Should this method be exposed in the public API?
+* TODO: refactor this method so that it conforms to the API
+* @param myParam The parameter for this method
+*/
