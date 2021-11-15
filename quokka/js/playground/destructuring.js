@@ -51,3 +51,16 @@ a; //3
 let arrToSwap = [1, 2, 3];
 [arrToSwap[0], arrToSwap[2]] = [arrToSwap[2], arrToSwap[0]];
 arrToSwap; // [3, 2, 1]
+
+//** Parsing an array returned from a function
+const fnArr = () => [1, 2, 3];
+[o, s] = fnArr();
+o; // 1
+s; // 2
+// Ignoring some returned values
+[, , t] = fnArr();
+t; // 3
+
+const [p, ...others] = [1, 2, 3];
+p; // 1
+others; // [2, 3]
