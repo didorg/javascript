@@ -1,12 +1,18 @@
 //** Destructuring
 
 const { first: f, last: l } = { first: "Jane", last: "Doe" };
-f;
-l;
+f; // Jane
+l; // Doe
 
-const [firstElement, secondElement] = [1, 2, 3, 4];
-firstElement;
+const [firstElement = 1, secondElement = 1] = [3, 4, 5, 6];
+firstElement; // 3
 
+//** Basic variable assignment
+const strNums = ["one", "two", "three"];
+const [red, yellow, green] = strNums;
+red; // one
+
+//** forEach
 let itemsArr = [
   ["foo", 3],
   ["bar", 9],
@@ -36,3 +42,12 @@ let itemsObj = [
 itemsObj.forEach(({ word, count }) =>
   console.log(`itemsObj ${word} - ${count}`)
 );
+
+//** Swapping variables
+let a = 1;
+let b = 3;
+[a, b] = [b, a];
+a; //3
+let arrToSwap = [1, 2, 3];
+[arrToSwap[0], arrToSwap[2]] = [arrToSwap[2], arrToSwap[0]];
+arrToSwap; // [3, 2, 1]
