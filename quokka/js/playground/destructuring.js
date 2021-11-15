@@ -64,3 +64,20 @@ t; // 3
 const [p, ...others] = [1, 2, 3];
 p; // 1
 others; // [2, 3]
+
+// ** Unpacking fields from objects passed as a function parameter
+const user = {
+  id: 42,
+  displayName: "jdoe",
+  fullName: {
+    firstName: "John",
+    lastName: "Doe",
+  },
+};
+
+const userId = ({ id }) => id;
+const whois = ({ displayName, fullName: { firstName: name }}) => `${displayName} is ${name}`;
+
+console.log(userId(user)); // 42
+console.log(whois(user)); // jdoe is John
+
