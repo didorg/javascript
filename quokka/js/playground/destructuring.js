@@ -1,8 +1,11 @@
 //** Destructuring
 
-let { first: f, last: l } = { first: "Jane", last: "Doe" };
+const { first: f, last: l } = { first: "Jane", last: "Doe" };
 f;
 l;
+
+const [firstElement, secondElement] = [1, 2, 3, 4];
+firstElement;
 
 let itemsArr = [
   ["foo", 3],
@@ -30,4 +33,6 @@ let itemsObj = [
     },
   },
 ];
-itemsObj.forEach(({ word, count }) => console.log(`itemsObj ${word} - ${count}`));
+itemsObj.forEach(({ word, count }) =>
+  console.log(`itemsObj ${word} - ${count}`)
+);
