@@ -206,14 +206,37 @@ const highestPrice = cars.reduce((acc, currCar) => {
   if (null === acc || currCar.price > acc) return currCar.price;
   return acc;
 }, null);
-console.log(highestPrice);
-console.table(cars);
+console.log(highestPrice); // 31000
+//console.table(cars);
 
-/** 
-* Better Comments extension
-** Important information is highlighted
-* ! Deprecated method, do not use
-* ? Should this method be exposed in the public API?
-* TODO: refactor this method so that it conforms to the API
-* @param myParam The parameter for this method
-*/
+/**
+ * Better Comments extension
+ ** Important information is highlighted
+ * ! Deprecated method, do not use
+ * ? Should this method be exposed in the public API?
+ * TODO: refactor this method so that it conforms to the API
+ * @param myParam The parameter for this method
+ */
+
+const carsMappedYear = (cars) => {
+  let today = new Date();
+  let year = today.getFullYear();
+
+  let mappedYear = cars.map((car) => {
+    return {
+      brand: `${car.brand}`,
+      model: `${car.model} ${year}`,
+    };
+  });
+
+  let colors = ['red', 'blue'];
+
+  return {
+    mappedYear,
+    colors,
+  };
+};
+
+const {mappedYear, colors} = carsMappedYear(cars);
+mappedYear;
+colors;
