@@ -229,7 +229,7 @@ const carsMappedYear = (cars) => {
     };
   });
 
-  let colors = ['red', 'blue'];
+  let colors = ["red", "blue"];
 
   return {
     mappedYear,
@@ -237,6 +237,18 @@ const carsMappedYear = (cars) => {
   };
 };
 
-const {mappedYear, colors} = carsMappedYear(cars);
+const { mappedYear, colors } = carsMappedYear(cars);
 mappedYear;
 colors;
+
+const getVersion = () => {
+  const version = 5;
+  return {
+    fobo: 1,
+    version,
+  };
+};
+
+const { version } = getVersion();
+version; //5
+
