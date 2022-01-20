@@ -1,3 +1,5 @@
+import moment from 'moment';
+
 // Using (Quokka.js VSC Extension) https://quokkajs.com/
 let cars = [
   {
@@ -252,3 +254,40 @@ const getVersion = () => {
 const { version } = getVersion();
 version; //5
 
+let time = 1701440921000;
+const month = moment(time).clone().startOf('month');
+console.log(month);
+
+const m = moment(time).clone().endOf('month');
+console.log(m);
+
+const mm = moment(time).get('month');
+console.log(mm);
+
+const year = moment(time).clone().startOf('year');
+console.log(year);
+
+
+let startMonth = moment(time).clone().startOf('year');
+let endMonth = moment(time).clone().endOf('year');
+
+for (let m = moment(startMonth); m.isBefore(endMonth); m.add(1, 'months')) {
+    console.log(m.format('YYYY-MM-DD'));
+    console.log(m);
+}
+
+while (endMonth.isAfter(startMonth)) {
+    console.log(startMonth.format('YYYY-MM-DD'))
+    //increment by one day
+    startMonth.add(1, 'month')
+}
+
+//If you want an inclusive end date
+
+// let startDate = moment()
+// let endDate = moment().add(5, 'days')
+// while (endDate.isSameOrAfter(startDate)) {
+//     console.log(startDate.format('YYYY-MM-DD'))
+//     //increment by one day
+//     startDate.add(1, 'day')
+// }
