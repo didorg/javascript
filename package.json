@@ -1,5 +1,8 @@
 {
   "devDependencies": {
     "@types/node": "^16.11.7"
+  },
+  "dependencies": {
+    "moment": "^2.29.1"
   }
 }
