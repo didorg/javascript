@@ -218,7 +218,7 @@ console.log(highestPrice); // 31000
  * @param myParam The parameter for this method
  */
 
-const carsMappedYear = (cars) => {
+const carsMapped = (cars) => {
   let today = new Date();
   let year = today.getFullYear();
 
@@ -237,7 +237,7 @@ const carsMappedYear = (cars) => {
   };
 };
 
-const { mappedYear, colors } = carsMappedYear(cars);
+const { mappedYear, colors } = carsMapped(cars);
 mappedYear;
 colors;
 
