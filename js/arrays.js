@@ -1,3 +1,15 @@
+const data = [
+  { name: "Anne", age: 20 },
+  { name: "Mike", age: 24 },
+  { name: "Max", age: 27 },
+  { name: "Sara", age: 25 },
+  { name: "George", age: 24 },
+];
+
+const colors = ["red", "green", "blue"];
+const [value1, value2, value3] = colors;
+console.log(value1); //R/ red
+
 let fruits = ["Apples", "bananas", "mangoes"];
 let citrus = ["oranges", "mandarins", "limes"];
 const scores = [10, 6, 7, 8, 4, 9, 10, 8];
@@ -9,6 +21,16 @@ const stocks = [
   { symbol: "AMD", name: "AMD", price: 105, premium: true },
   { symbol: "DIDI", name: "DiDi Global Inc.", price: 15, premium: false },
 ];
+
+console.log(data.length);
+const filteredData = data.filter((element) => element.age > 24);
+console.log(filteredData);
+const mappedData = filteredData.map((element) => element.name);
+console.log(mappedData); // R/ [“Max”, “Sara”]
+const average =
+  data.reduce((acc, element) => acc + element.age, 0) / data.length;
+console.log(average);
+//* map(), filter() and reduce() methods are known as higher-order functions
 
 console.log(fruits[1]);
 console.log(fruits.length);
@@ -75,4 +97,3 @@ scores.sort(asc);
 stocks.sort(ascStocksPrice);
 console.log(scores);
 console.table(stocks);
-
