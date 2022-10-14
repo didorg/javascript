@@ -3,6 +3,7 @@
     "@types/node": "^16.11.7"
   },
   "dependencies": {
-    "moment": "^2.29.1"
+    "moment": "^2.29.1",
+    "node-fetch": "^3.2.10"
   }
 }
