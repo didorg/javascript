@@ -83,6 +83,17 @@ const primiumTotal = stocks.reduce((acc, curr) => {
   return acc;
 }, 0);
 console.log(primiumTotal);
+//*********************************!
+// The A+ of reduce()!
+const arrReduce = [1, 2, 5, 4, 3];
+arrReduce.reduce((p, c, i, a) => {
+  console.log(p); // previous
+  console.log(c); // current
+  console.log(i); // indice
+  console.log(a); // array itself
+  return p + c;
+}, 0); // Initial value
+//*********************************!
 
 // Find
 const firstPremium = stocks.find((pm) => {
